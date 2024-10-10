@@ -1,0 +1,43 @@
+{
+  "name": "smz-relativepath",
+  "displayName": "smz-relativepath",
+  "description": "relativepath",
+  "version": "0.0.2",
+  "engines": {
+    "vscode": "^1.93.1"
+  },
+  "publisher": "jisuanxiangduilujing",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "extension.calculateRelativePath",
+      "title": "计算相对路径"
+    }],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "extension.calculateRelativePath",
+          "when": "editorFocus",
+          "group": "navigation@1"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "pnpm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.93.1",
+    "@types/mocha": "^10.0.8",
+    "@types/node": "20.x",
+    "eslint": "^9.11.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // 或者 ESNext
+    "module": "ESNext", // 或者 CommonJS
+    "outDir": "./out", // 输出目录
+    "strict": true, // 启用严格模式
+    "esModuleInterop": true, // 使 CommonJS 和 ES 模块互操作
+    "skipLibCheck": true // 跳过库文件检查
+  },
+  "include": ["src/**/*.ts"], // 包含源代码
+  "exclude": ["node_modules"] // 排除不需要的目录
+}
